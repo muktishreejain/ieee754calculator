@@ -3,7 +3,8 @@ Module: ops.py
 Performs IEEE-754 style addition and multiplication on 32-bit floats.
 """
 
-from .convert import float_to_ieee754, ieee754_to_float
+from convert import float_to_ieee754, ieee754_to_float
+
 
 def add_floats(a: float, b: float) -> float:
     return a + b
