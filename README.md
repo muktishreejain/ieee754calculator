@@ -34,7 +34,16 @@ The project is structured into three primary components:
    - Provides step-by-step explanation in Learning Mode
    - Maintains documentation and presentation material
 
-   
+**High-Level Flow:**  
+```mermaid
+flowchart TD
+  A[User Input] --> B[GUI Interface]
+  B --> C[Backend Logic]
+  C --> B
+  B --> D[Visualization Layer]
+  D --> E[Final Output]
+```
+
 ## Team Roles
 **Ayush Aryan (Backend Developer)**
 IEEE 754 conversion logic (decimal ↔ binary)
@@ -56,12 +65,3 @@ Documentation, README, and project presentation
 The IEEE 754 Floating-Point Calculator demonstrates how floating-point arithmetic works inside computers in a clear and interactive way.
 By combining backend accuracy, a practical GUI, and visual breakdowns, the project serves as both a calculator and a learning aid.
 Future enhancements will expand its precision, features, and accessibility.
-
-**High-Level Flow:**  
-```mermaid
-flowchart TD
-  A[User Input] --> B[GUI Interface]
-  B --> C[Backend Logic]
-  C --> B
-  B --> D[Visualization Layer]
-  D --> E[Final Output]
