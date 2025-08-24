@@ -12,6 +12,10 @@ Assumes 32-bit IEEE-754 functions in convert.py (as provided).
 
 import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
+import convert
+import ops
+import utils
+
 
 # Try local package-style imports (if project is packaged)
 try:
