@@ -1,12 +1,12 @@
-# 🧮 IEEE 754 Floating-Point Calculator (Python GUI)
+# IEEE 754 Floating-Point Calculator (Python GUI)
 
-## 📌 Overview  
+## Overview  
 The IEEE 754 Floating-Point Calculator is a Python-based project that demonstrates how real numbers are represented and processed according to the IEEE 754 standard.  
 It provides a user-friendly interface for conversion, arithmetic operations, and visualisation of floating-point numbers, making the concept easier to understand for learners and useful for practical applications.
 
 ---
 
-## ✨ Features  
+## Features  
 - **Decimal ↔ IEEE 754 Conversion** (32-bit single precision)  
 - **Binary ↔ Decimal Conversion** with validation  
 - **Arithmetic Operations**: Addition and Multiplication  
@@ -16,7 +16,7 @@ It provides a user-friendly interface for conversion, arithmetic operations, and
 
 ---
 
-## 🏗️ Architecture  
+## Architecture  
 The project is structured into three primary components:  
 
 1. **Backend (Core Logic)**  
@@ -35,7 +35,7 @@ The project is structured into three primary components:
    - Maintains documentation and presentation material
 
    
-## 👥 Team Roles
+## Team Roles
 **Ayush Aryan (Backend Developer)**
 IEEE 754 conversion logic (decimal ↔ binary)
 Arithmetic operations implementation
@@ -43,13 +43,19 @@ Core testing and validation
 
 **Mukti Shree Jain (GUI Developer)**
 GUI design and development
-Integration of backend logic with interface
+Integration of backend logic with the interface
 Input validation and result presentation
 
-**Vivek Kumar Prusty (Visualization & Documentation)**
-Visualization of sign, exponent, and mantissa
+**Vivek Kumar Prusty (Visualisation & Documentation)**
+Visualisation of sign, exponent, and mantissa
 Conceptual design for Learning Mode
 Documentation, README, and project presentation
+
+## Conclusion
+
+The IEEE 754 Floating-Point Calculator demonstrates how floating-point arithmetic works inside computers in a clear and interactive way.
+By combining backend accuracy, a practical GUI, and visual breakdowns, the project serves as both a calculator and a learning aid.
+Future enhancements will expand its precision, features, and accessibility.
 
 **High-Level Flow:**  
 ```mermaid
