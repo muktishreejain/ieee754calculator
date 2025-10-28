@@ -7,7 +7,7 @@ It provides a user-friendly interface for conversion, arithmetic operations, and
 ---
 
 ## Features  
-- **Decimal ↔ IEEE 754 Conversion** (32-bit single precision)  
+- **Decimal ↔ IEEE 754 Conversion** (32-bit single precision) & (64-bit Double Precision)
 - **Binary ↔ Decimal Conversion** with validation  
 - **Arithmetic Operations**: Addition and Multiplication  
 - **GUI Interface** using Tkinter/PyQt  
@@ -62,6 +62,6 @@ Documentation, README, and project presentation
 
 ## Conclusion
 
-The IEEE 754 Floating-Point Calculator demonstrates how floating-point arithmetic works inside computers in a clear and interactive way.
+The IEEE 754 Floating-Point Calculator demonstrates how floating-point arithmetic works inside computers clearly and interactively.
 By combining backend accuracy, a practical GUI, and visual breakdowns, the project serves as both a calculator and a learning aid.
 Future enhancements will expand its precision, features, and accessibility.
