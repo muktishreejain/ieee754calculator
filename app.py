@@ -24,16 +24,39 @@ class IEEE754GUI(tk.Tk):
         title = tk.Label(self, text="IEEE-754 Calculator (32/64-bit) 🧮",
                          font=HEADING_FONT, fg="white", bg=COLORS["oxford"])
         title.pack(fill="x", pady=5)
+        # use grid in container and give columns weights 1:2 to achieve left:right = 1:2
         container = tk.Frame(self, bg=COLORS["almond"])
         container.pack(fill="both", expand=True, padx=10, pady=10)
+        container.grid_columnconfigure(0, weight=1)
+        container.grid_columnconfigure(1, weight=2)
+        container.grid_rowconfigure(0, weight=1)
+
         self.left_frame = tk.Frame(container, bg=COLORS["rose"], bd=2, relief="ridge")
-        self.left_frame.pack(side="left", fill="y", padx=5)
+        self.left_frame.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
         self.right_frame = tk.Frame(container, bg=COLORS["rose"], bd=2, relief="ridge")
-        self.right_frame.pack(side="left", fill="both", expand=True, padx=5)
+        self.right_frame.grid(row=0, column=1, sticky="nsew", padx=5, pady=5)
         self.precision = tk.StringVar(value="32")
-        tk.Label(self.left_frame, text="Precision:", font=SUBHEADING_FONT, bg=COLORS["rose"]).pack(anchor="w", padx=5, pady=2)
-        tk.Radiobutton(self.left_frame, text="32-bit", variable=self.precision, value="32", bg=COLORS["rose"]).pack(anchor="w", padx=5)
-        tk.Radiobutton(self.left_frame, text="64-bit", variable=self.precision, value="64", bg=COLORS["rose"]).pack(anchor="w", padx=5)
+        tk.Label(self.left_frame, text="Precision:", font=SUBHEADING_FONT, bg=COLORS["rose"]).pack(anchor="w", padx=5, pady=6)
+        # Use button-like radiobuttons for a bigger, more modern look
+        rb_kwargs = {
+            "font": ("Georgia", 14, "bold"),
+            "indicatoron": 0,            # render as toggle button
+            "width": 12,
+            "padx": 6,
+            "pady": 6,
+            "bd": 1,
+            "relief": "groove",
+            "bg": COLORS["rose"],
+            "fg": "white",
+            "activebackground": COLORS["violet"],
+            "activeforeground": "white",
+            "selectcolor": COLORS["violet"],
+        }
+        # center the radio buttons horizontally by placing them in their own frame
+        precision_frame = tk.Frame(self.left_frame, bg=COLORS["rose"])
+        precision_frame.pack(pady=4)   # default pack centers the frame contents
+        tk.Radiobutton(precision_frame, text="32-bit", variable=self.precision, value="32", **rb_kwargs).pack(side="left", padx=8)
+        tk.Radiobutton(precision_frame, text="64-bit", variable=self.precision, value="64", **rb_kwargs).pack(side="left", padx=8)
         self.build_left_panel()
         self.build_right_panel()
 
